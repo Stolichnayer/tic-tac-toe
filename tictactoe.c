@@ -243,6 +243,7 @@ int main(void)
     }
     while(endAnswer == 'y'); 
  
-    printf("\n\n *************************\n \tEND OF GAME\n *************************\n\n");   system("pause");
+    printf("\n\n *************************\n \tEND OF GAME\n *************************\n\n");   
+    system("pause");
     return 0;
 }
