@@ -19,10 +19,10 @@ int win_check(char grid_data[3][3])
     int k,l;
     int counter;
  
-    counter=0;
-    for(k=0; k<3; k++)
+    counter = 0;
+    for(k = 0; k < 3; k++)
     {
-        for(l=0; l<3; l++)
+        for(l = 0; l < 3; l++)
         {
             if(grid_data[k][l] == ' ')
                 counter++; 
@@ -30,10 +30,10 @@ int win_check(char grid_data[3][3])
     }
     if(counter == 9)
         return 0;
-    counter=0; 
+    counter = 0; 
  
 // Row Check
-    for(k=0; k<3; k++)
+    for(k = 0; k < 3; k++)
     {
         if(grid_data[k][0] == grid_data[k][1] && grid_data[k][0] == grid_data[k][2])
         { 
@@ -42,7 +42,7 @@ int win_check(char grid_data[3][3])
         }
     } 
 // Column Check
-    for(k=0; k<3; k++)
+    for(k = 0; k < 3; k++)
     {
         if(grid_data[0][k] == grid_data[1][k] && grid_data[0][k] == grid_data[2][k])
         {
@@ -83,7 +83,7 @@ void display_game(char grid_data[3][3], int player, int round, int wins1, int wi
  
     printf("[%d]\t\t   [%d] \t\t        WINS:[%d]\n\n", wins1, draws, wins2); 
  
-    for(i=0; i<3; i++)
+    for(i = 0; i < 3; i++)
     {
         printf("\t\t        %c | %c | %c \n", grid_data[i][0], grid_data[i][1], grid_data[i][2]);
  
@@ -117,19 +117,19 @@ void display_game(char grid_data[3][3], int player, int round, int wins1, int wi
  
 int main(void)
 {
-    int player=0;
-    int round=1;
-    int wins1=0;
-    int wins2=0;
-    int draws=0;
-    int i,j;
+    int player = 0;
+    int round = 1;
+    int wins1 = 0;
+    int wins2 = 0;
+    int draws = 0;
+    int i, j;
     char grid_data[3][3] = {{' ', ' ', ' '},{ ' ', ' ', ' '},{' ', ' ', ' '}};
     char startAnswer;
     char endAnswer;
     int user_input_1;
     int user_input_2;
-    int spaceFlag=0;
-    int drawFlag=0;
+    int spaceFlag = 0;
+    int drawFlag = 0;
     int x;
     int y;
     int checkflag;
@@ -160,9 +160,9 @@ int main(void)
             }
         }
  
-        for(i=0; i<9; i++)
+        for(i = 0; i < 9; i++)
         { 
-            checkflag=0;
+            checkflag = 0;
             while(!checkflag)
             {
                 if(!scanf("%d,%d", &user_input_1, &user_input_2))
@@ -218,11 +218,11 @@ int main(void)
             if(i == 8 && !win_check(grid_data))
                 {
                     draws++;
-                    drawFlag=1;
+                    drawFlag = 1;
                 } 
             system("cls");
             display_game(grid_data, player, round, wins1, wins2, draws, drawFlag);
-            drawFlag=0; 
+            drawFlag = 0; 
         }
  
         endAnswer = ' ';
@@ -233,9 +233,9 @@ int main(void)
         }
         
         player = 2;
-        for(i=0; i<3; i++)
+        for(i  =0; i < 3; i++)
         {
-            for(j=0; j<3; j++)
+            for(j = 0; j < 3; j++)
                 grid_data[i][j] = ' ';
         }
     round++;
