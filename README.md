@@ -4,3 +4,5 @@
 Two player local multiplayer.
 
 Play by typing the coordinates of the grid in "x,y" format. (for example "1,2" - 1st row, 2nd column)
+
+![alt text](https://github.com/alexperrakis/tic-tac-toe/blob/master/Preview.png)
